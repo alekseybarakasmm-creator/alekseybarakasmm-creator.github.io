@@ -151,10 +151,11 @@
         .input-field:focus { outline: none; border-bottom-color: var(--color-accent); }
         select.input-field { appearance: none; cursor: pointer; }
         
+        
         /* Validation UI */
-        .input-field:user-invalid { border-bottom-color: var(--color-error); }
-        .error-msg { color: var(--color-error); font-size: 0.75rem; position: absolute; bottom: -1.2rem; left: 0; opacity: 0; transition: opacity 0.3s; }
-        .input-field:user-invalid ~ .error-msg { opacity: 1; }
+.input-field:user-invalid, .input-field.is-invalid { border-bottom-color: var(--color-error); }
+.error-msg { color: var(--color-error); font-size: 0.75rem; position: absolute; bottom: -1.2rem; left: 0; opacity: 0; transition: opacity 0.3s; }
+.input-field:user-invalid ~ .error-msg, .input-field.is-invalid ~ .error-msg { opacity: 1; }
 
         .btn-submit {
             grid-column: 1 / -1; margin-top: 2rem;
